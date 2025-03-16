@@ -42,8 +42,8 @@ users = {"bob" : "123",
 oddelovac = 40 * "-"
 
 #zadání uživatelského jména
-jmeno = "bob" #input("zadejte uživatelské jméno : ")
-heslo = "123" #input("Zadejte heslo : ")
+jmeno = input("zadejte uživatelské jméno : ")
+heslo = input("Zadejte heslo : ")
 if users.get(jmeno) != heslo:
     print("unregistered user, terminating the program..")
     exit()
@@ -67,7 +67,7 @@ if 0 < text > 3:
     exit()
 
 #list_vyberu = list()
-TEXTS[(text- 1)].replace("-", " ")
+#TEXTS[(text- 1)].replace("-", " ")
 list_vyberu = TEXTS[(text- 1)].replace("-", " ").split()
 print(list_vyberu)
 
