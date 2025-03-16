@@ -121,6 +121,7 @@ print(oddelovac)
 #Teď vyrobíme a vytiskneme graf
 print("LEN|     OCCURENCES        |NR.")
 print(oddelovac)
+
 for legenda in range(1, (len(delka_slov)) + 1):
     #pokud není výskyt slov s určitým počtem písmen tak nevypíšeme a přeskočíme
     if not delka_slov.get(legenda):
