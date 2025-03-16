@@ -66,14 +66,11 @@ if 0 < text > 3:
     print("You don´t print number between 1 and 3")
     exit()
 
-#list_vyberu = list()
-#TEXTS[(text- 1)].replace("-", " ")
 list_vyberu = TEXTS[(text- 1)].replace("-", " ").split()
-print(list_vyberu)
 
 #pomocné proměnné
 prvni_velke = 0
-prvni_male = 0
+vse_male = 0
 vse_velke = 0
 cislo = 0
 soucet = 0
@@ -97,7 +94,7 @@ for slovo_vyberu in list_vyberu:
     if upravene_slovo[0].isupper() and upravene_slovo[1:-1].islower():
         prvni_velke += 1
     elif upravene_slovo.islower():
-        prvni_male += 1
+        vse_male += 1
     elif upravene_slovo.isupper():
         vse_velke += 1
     elif upravene_slovo.isnumeric():
@@ -116,7 +113,7 @@ print(oddelovac)
 print("There are ", len(list_vyberu), "words in the selected text")
 print("There are ", prvni_velke, "titlecase words.")
 print("There are ", vse_velke, "uppercase words.")
-print("There are ", prvni_male, "lowercase words.")
+print("There are ", vse_male, "lowercase words.")
 print("There are ", cislo, "numeric strings.")
 print("The sum of all numbers :", soucet)
 print(oddelovac)
